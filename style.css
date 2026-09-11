@@ -102,7 +102,6 @@ span {
 .home-img img {
     width: 30vw;
     border-radius: 50%;
-    /* إصلاح خاصية الظل للخلفية */
     box-shadow: 0 0 25px #b74b4b;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -174,7 +173,6 @@ span {
     76%, 100% { content: "REST API Developer"; }
 }
 
-/* تنسيقات قسم المشاريع */
 .heading {
     text-align: center;
     font-size: 4.5rem;
@@ -230,14 +228,13 @@ span {
         font-size: 4rem;
     }
 }
-/* Heading global style */
 .heading {
     text-align: center;
     font-size: 4.5rem;
     margin-bottom: 4rem;
 }
 
-/* About Section */
+
 .about {
     display: flex;
     flex-direction: column;
@@ -253,7 +250,7 @@ span {
     line-height: 1.8;
 }
 
-/* Skills Section */
+
 .skills {
     background-color: black;
 }
@@ -289,7 +286,7 @@ span {
     font-size: 1.8rem;
 }
 
-/* Contact Section */
+
 .contact {
     background-color: #0d0d0d;
 }
@@ -338,5 +335,67 @@ span {
 @media(max-width: 768px) {
     .contact form .input-box input {
         width: 100%;
+    }
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: #b74b4b;
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 995px) {
+    #menu-icon {
+        display: block; 
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-bottom: 2px solid #b74b4b;
+        display: none; 
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    
+    .home {
+        flex-direction: column; 
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .home-img {
+        order: -1; 
+    }
+
+    .home-img img {
+        width: 45vw; 
+        max-width: 220px;
+    }
+
+    .home-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.4rem;
     }
 }
